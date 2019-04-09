@@ -1132,6 +1132,7 @@ void editor_process_keypress(struct editor* e) {
 		case 'l': editor_move_cursor(e, KEY_RIGHT, 1); break;
 		case ']': editor_increment_byte(e, 1); break;
 		case '[': editor_increment_byte(e, -1); break;
+		case 'Q': exit(0);
 		case KEY_DEL:
 		case 'x': editor_delete_char_at_cursor(e); break;
 		case 'n': editor_process_search(e, e->searchstr, SEARCH_FORWARD); break;
